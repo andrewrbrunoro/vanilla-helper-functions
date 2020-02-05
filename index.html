@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funções para input</title>
+</head>
+<body>
+
+
+<input type="text"
+       oninput="inputOnlyNumber(this)"
+       placeholder="Apenas números" />
+
+<script type="text/javascript">
+
+    function inputOnlyNumber (e) {
+        e.value = e.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
+    }
+
+</script>
+</body>
+</html>
